@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memory Challenge Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- College Header -->
+
+    <div class="header">
+
+        <img src="images/logo.png" class="logo">
+
+        <div>
+            <h1>K.C.S. KASI NADAR COLLEGE OF ARTS & SCIENCE</h1>
+            <h2>Department of Computer Science</h2>
+            <h2>KCSKNC GRID'26</h2>
+            <h3>Inter-Department Competition</h3>
+        </div>
+
+    </div>
+
+    <!-- Title -->
+
+    <div class="gameTitle">
+
+        🧠 MEMORY CHALLENGE GAME
+
+    </div>
+
+    <!-- RULES -->
+
+    <div id="rulesPage">
+
+        <h2>Game Rules</h2>
+
+        <ol>
+
+            <li>There are <b>30 words</b> to memorize.</li>
+
+            <li>You have <b>1 Minute</b> to memorize.</li>
+
+            <li>The words disappear automatically.</li>
+
+            <li>You have <b>2 Minutes</b> to type the words.</li>
+
+            <li>Separate each word using commas (,).</li>
+
+            <li>Each correct word = 1 Mark.</li>
+
+            <li>Wrong spellings are not counted.</li>
+
+            <li>Click Start to continue.</li>
+
+        </ol>
+
+        <button id="showRegister">
+            Next →
+        </button>
+
+    </div>
+
+    <!-- Registration -->
+
+    <div id="registerPage" style="display:none;">
+
+        <h2>Participant Registration</h2>
+
+        <form id="registerForm">
+
+            <input
+            type="text"
+            id="name"
+            placeholder="Enter Name"
+            required>
+
+            <select id="class" required>
+
+                <option value="">Select Class</option>
+
+                <option>I BCA A</option>
+                <option>I BCA B</option>
+
+                <option>II BCA A</option>
+                <option>II BCA B</option>
+
+                <option>III BCA A</option>
+                <option>III BCA B</option>
+
+                <option>I B.Sc Computer Science</option>
+                <option>II B.Sc Computer Science</option>
+                <option>III B.Sc Computer Science</option>
+
+                <option>I B.Com A</option>
+                <option>II B.Com A</option>
+                <option>III B.Com A</option>
+		<option>I B.Com B</option>
+                <option>II B.Com B</option>
+                <option>III B.Com B</option>
+                <option>III B.Com C</option>
+		<option>I B.Com(C.S)</option>
+                <option>II B.Com(C.S)</option>
+                <option>III B.Com(C.S)</option>
+
+                <option>I BBA</option>
+                <option>II BBA</option>
+                <option>III BBA</option>
+
+            </select>
+
+            <input
+            type="text"
+            id="systemNo"
+            placeholder="System Number"
+            required>
+
+            <button type="submit">
+                🚀 Start Game
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- Game Screen -->
+
+    <div id="gamePage" style="display:none;">
+
+        <div class="playerInfo">
+
+            <p><b>Name :</b> <span id="playerName"></span></p>
+
+            <p><b>Class :</b> <span id="playerClass"></span></p>
+
+            <p><b>System No :</b> <span id="playerSystem"></span></p>
+
+        </div>
+
+        <div id="timer">
+
+            01:00
+
+        </div>
+
+        <h2>Memorize These 30 Words</h2>
+
+        <div id="wordBox">
+
+        </div>
+
+    </div>
+
+    <!-- Answer Page -->
+
+    <div id="answerPage" style="display:none;">
+
+        <h2>Type the Words You Remember</h2>
+
+        <div id="answerTimer">
+
+            02:00
+
+        </div>
+
+        <textarea
+        id="answerBox"
+        placeholder="Separate each word using commas"></textarea>
+
+        <br><br>
+
+        <button id="submitBtn">
+
+            Submit Answers
+
+        </button>
+
+    </div>
+
+    <!-- Result -->
+
+    <div id="resultPage" style="display:none;">
+
+        <h1>🏆 GAME OVER</h1>
+
+        <h2 id="scoreText"></h2>
+
+        <h3 id="performance"></h3>
+
+<div class="thankYou">
+    🎉 Thank You for Participating! 🎉
+</div>
+            </div>
+
+</div>
+<div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
